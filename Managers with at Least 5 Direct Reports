@@ -1,0 +1,6 @@
+select ee.name
+from Employee e
+join Employee ee
+on e.managerId=ee.id
+group by ee.name,ee.id
+having COUNT(ee.id)>=5
